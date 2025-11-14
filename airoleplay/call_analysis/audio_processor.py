@@ -101,10 +101,20 @@ class AudioProcessor:
         segments = []
         if hasattr(transcript, 'segments') and transcript.segments:
             for seg in transcript.segments:
+                # Handle both dict and object formats
+                if isinstance(seg, dict):
+                    start = seg['start']
+                    end = seg['end']
+                    text = seg['text'].strip()
+                else:
+                    start = seg.start
+                    end = seg.end
+                    text = seg.text.strip()
+
                 segments.append(TranscriptSegment(
-                    start=seg['start'],
-                    end=seg['end'],
-                    text=seg['text'].strip()
+                    start=start,
+                    end=end,
+                    text=text
                 ))
         else:
             # Fallback if no segments
