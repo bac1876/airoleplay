@@ -1,0 +1,218 @@
+{
+  "cfr_framework": {
+    "pace_lead": {
+      "name": "PACE & LEAD",
+      "description": "Make statements client agrees with (PACE), then guide them where you want (LEAD)",
+      "types": {
+        "universal_pace": "Statements everyone agrees with (Today is Thursday, We're meeting on Zoom)",
+        "personal_pace": "Subjective statements client agrees with (You want to move by end of month, You have 3 kids)"
+      },
+      "pattern": "PACE → PACE → PACE → LEAD",
+      "examples": [
+        "You want to move by end of month (PACE) → You have 3 kids (PACE) → Your max is $650k (PACE) → So let's look at homes this weekend (LEAD)"
+      ]
+    },
+    "five_yes_technique": {
+      "name": "5 YES Technique",
+      "description": "Get 5 verbal paces (agreements) then ask for what you want",
+      "pattern": "YES → YES → YES → YES → YES → CLOSE",
+      "tie_downs": ["does that make sense?", "does that sound good?", "does that work for you?"],
+      "examples": [
+        "You want to get into your new home within 2 months? (YES) This is your first home and you're ready? (YES) Your max budget is $450k? (YES) You need at least 3 bedrooms? (YES) School district X is a deal breaker? (YES) → Great so next step is to meet with the lender and look at homes - sound good?"
+      ]
+    },
+    "cause_and_effect": {
+      "name": "Cause & Effect Language",
+      "description": "Imply one thing causes another using power words",
+      "keywords": ["causes", "resolves", "urges", "demonstrates", "determines", "drives", "forces", "creates", "empowers", "motivates", "leads", "proves", "allows", "makes", "generates", "shows", "compels", "means"],
+      "pattern": "[Action] [keyword] [desired outcome]",
+      "examples": [
+        "Looking at the comps makes you see the value more clearly, doesn't it?",
+        "Pricing your home competitively means we get more showings and sell quicker",
+        "Talking to a lender empowers you to write strong offers, don't you agree?"
+      ]
+    },
+    "conditional_bind": {
+      "name": "Conditional Bind",
+      "description": "Link an accepted PACE to a LEAD using if-then logic",
+      "bind_words": ["must", "need", "will", "see", "have to", "want to", "would", "should"],
+      "pattern": "If [PACE is true] then [LEAD must be true]",
+      "variations": {
+        "simple": "If PACE then LEAD",
+        "question": "Q: Ask question → Their answer = PACE → That's exactly why LEAD",
+        "with_tiedown": "If PACE then LEAD + tie-down (does that make sense?)",
+        "embedded": "If PACE then you must...[EMBEDDED COMMAND]...tie-down"
+      },
+      "examples": [
+        "You said selling quickly is important (PACE) → then you must price it according to market (LEAD)",
+        "Q: When do you want to be in your new home? A: Before July 1st → Perfect that's exactly why we need to START LOOKING NOW",
+        "If you want to buy in this market (PACE) → then you must write a strong offer, does that make sense?"
+      ]
+    },
+    "arp": {
+      "name": "ARP (Acknowledge, Respond, Pivot)",
+      "description": "Handle red herrings and click-run responses without pause",
+      "steps": {
+        "acknowledge": "Repeat back what they said simply",
+        "respond": "Answer the question directly and honestly",
+        "pivot": "Talk about what YOU want without pause"
+      },
+      "pattern": "A → R → P (no pause between steps)",
+      "examples": [
+        "C: Just wondering what you charge? → A: Perfect, so you're wondering what we charge → R: Our team generally charges 6%, we do have special programs → P: With that in mind why don't we meet and I'll show you our marketing - I have time Thursday or weekend, which works better?"
+      ]
+    },
+    "four_step_objection_handling": {
+      "name": "4-Step Objection Handling",
+      "description": "The complete framework for handling any objection",
+      "steps": {
+        "1_acknowledge_affirm": {
+          "description": "Show you're listening, align with them, eliminate 'I'm right you're wrong'",
+          "terms": ["Perfect", "That makes perfect sense", "Absolutely", "Great", "Fantastic", "You're absolutely right", "That's valid", "That's a valid concern", "You're right", "I can appreciate that", "Amazing", "Most people tell me that", "Wow that's awesome", "I can see the benefit in that", "Terrific", "That's right", "That's true", "I agree", "Wonderful", "I understand your concern"],
+          "avoid": ["I understand" - breaks rapport],
+          "pattern": "[Acknowledgement term] + [restate their concern]"
+        },
+        "2_isolate": {
+          "description": "Make sure you're handling the RIGHT objection, find all objections",
+          "questions": [
+            "Besides X, is there any other reason you wouldn't Y?",
+            "Out of curiosity, what is the benefit of X for you?",
+            "What specifically makes you believe X is in your best interest?",
+            "Other than that, is there anything else that would keep you from moving forward?"
+          ],
+          "purpose": "Uncover hidden objections before investing time in wrong solution"
+        },
+        "3_handle": {
+          "description": "Offer different perspective, answer their question",
+          "purpose": "Help them see it in a new light"
+        },
+        "4_close": {
+          "description": "Set appointment, write offer, sign contract",
+          "types": ["Alternative choice", "5 Yes", "Assumptive", "Trial", "Straight forward", "Embedded command"]
+        }
+      },
+      "rules": [
+        "Never argue - control emotions",
+        "Listen for understanding NOT to respond",
+        "Never make assumptions",
+        "Go slow - speaking fast removes trust",
+        "Speak softly - creates calm",
+        "Be persistent - last NO is the only one that counts"
+      ]
+    },
+    "feel_felt_found": {
+      "name": "Feel-Felt-Found",
+      "description": "Empathy technique using past client experiences",
+      "pattern": "I know exactly how you FEEL... many clients have FELT the same way... but what they FOUND was [solution]",
+      "variations": ["First person (I felt)", "Third party (my clients felt)"],
+      "examples": [
+        "I know exactly how you feel about getting a great deal, and many of my clients have felt the exact same way, but what they found was working with the listing agent was actually a disadvantage because they missed out on buyer programs that save money"
+      ]
+    },
+    "has_there_ever_been_a_time": {
+      "name": "Has There Ever Been A Time When",
+      "description": "Leverage past mistakes to prevent new ones",
+      "psychology": "People hate making mistakes, hate repeating mistakes, HATE when others know they're making a mistake",
+      "pattern": "Has there ever been a time when you were [considering action], you waited, and later regretted it? → My concern is that's exactly what will happen here → [specific market data] → does that make sense?",
+      "examples": [
+        "Has there ever been a time when you wanted to buy something, you waited and waited, then really regretted it because the opportunity was gone? My concern is that's exactly what's happening in this market..."
+      ]
+    },
+    "level_shift": {
+      "name": "Level Shift (Reframing)",
+      "description": "Attach new meaning, move to things you CAN control",
+      "shift_phrases": [
+        "What I think you are saying is...",
+        "The real issue is...",
+        "What appears most important to you is...",
+        "So, are you saying...",
+        "What I sense is...",
+        "What it sounds like you are saying is...",
+        "I believe you are asking...",
+        "The real question I believe is...",
+        "What I think I am hearing is...",
+        "What that really means is...",
+        "It sounds to me like...",
+        "What I hear you saying is..."
+      ],
+      "pattern": "[Shift phrase] + [reframe to something you can solve]",
+      "examples": [
+        "Client: Market will crash → Level Shift: It sounds to me like what's important to you is making good financial decisions, is that correct? → [provide data on appreciation]"
+      ]
+    },
+    "military_pattern": {
+      "name": "Military Pattern (Advanced)",
+      "description": "6-step persuasion framework from military recruiters",
+      "steps": [
+        "1. Repeat and Affirm",
+        "2. Isolate the objection",
+        "3. What would happen if you did it a different way?",
+        "4. Because here is why that different way is a good idea",
+        "5. If you would be willing to do that, I would be willing to do this for you",
+        "6. Close"
+      ],
+      "examples": [
+        "Objection: Wait for rates to drop → 1. Excellent, I appreciate you want lower rates → 2. Besides rate, any other reason not to buy? → 3. What would happen if waiting wasn't the best idea? → 4. If rates drop we go back to multiple offers and crazy market → 5. If you'll look at homes now, I'll get you no-cost refi when rates drop → 6. Sounds good doesn't it?"
+      ]
+    }
+  },
+  "closing_techniques": {
+    "alternative_choice": {
+      "description": "Give two options, both lead to your goal",
+      "examples": ["Which works better - today or tomorrow?", "In person or DocuSign?"]
+    },
+    "five_yes_verbal": {
+      "description": "Summarize with 5 paces then ask to proceed",
+      "pattern": "Now let me summarize: [YES] [YES] [YES] [YES] [YES] → Perfect, please sign here"
+    },
+    "assumptive": {
+      "description": "Assume they're moving forward",
+      "examples": ["Unless you have other questions, please sign above your name"]
+    },
+    "trial": {
+      "description": "Test readiness without committing",
+      "examples": ["Can you see yourself living in this neighborhood?", "Do you feel this home fits your needs?"]
+    },
+    "straightforward": {
+      "description": "Direct ask",
+      "examples": ["Based on everything we discussed, this seems like a great home - would you like to write an offer today?"]
+    },
+    "embedded_command": {
+      "description": "Hide the close in conversational flow",
+      "pattern": "Context + why don't we...[EMBEDDED COMMAND]...benefit?",
+      "examples": ["This home meets your criteria, why don't we...WRITE AN OFFER...so you can be in your new home in 30 days?"]
+    }
+  },
+  "embedded_commands": {
+    "description": "Commands hidden in conversation flow, said with slight emphasis",
+    "usage": "Pause slightly before, emphasize the command, resume normal speech",
+    "examples": [
+      "...you must...PRICE IT AGGRESSIVELY...don't you agree?",
+      "...you need to...HIRE A STRONG AGENT...does that make sense?",
+      "...why don't we...GO LOOK THIS WEEKEND...sound good?",
+      "...let's...START TODAY...with the contract",
+      "...you should...BUY NOW...before prices increase"
+    ]
+  },
+  "tie_downs": {
+    "description": "Questions that get agreement, turn statements into questions",
+    "examples": [
+      "does that make sense?",
+      "doesn't it?",
+      "don't you agree?",
+      "wouldn't you think?",
+      "wouldn't you?",
+      "right?",
+      "isn't it?",
+      "make sense?",
+      "sound good?",
+      "does that work for you?",
+      "can you see that?"
+    ]
+  },
+  "rapport_breakers": {
+    "description": "Phrases that BREAK rapport - avoid these",
+    "phrases": ["I understand" (without qualifier), "You're wrong", "Actually...", "But you said...", "That doesn't make sense"],
+    "note": "'I understand' alone breaks rapport - use 'I can appreciate that' or 'I understand your concern'"
+  }
+}

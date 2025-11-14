@@ -1,0 +1,76 @@
+{
+  "id": "investor_v1",
+  "label": "Investor – Cash-Flow Focused",
+  "tone": {
+    "formality": "low",
+    "energy": "calm",
+    "pace_wpm": 140,
+    "directness": "high"
+  },
+  "persona_traits": ["numbers-driven", "tax-savvy", "skeptical", "analytical"],
+  "context": {
+    "market": "Denver",
+    "budget": "600-900k",
+    "timeline": "30-60 days"
+  },
+  "goals": ["cap rate >= 6%", "low days on market", "near transit", "positive cash flow"],
+  "objection_patterns": [
+    {
+      "name": "CapRateTooLow",
+      "trigger_phrases": ["cap rate under", "cap rate too low", "cash flow not great", "ROI seems low"],
+      "emotion": "neutral",
+      "response_playbook": [
+        "Acknowledge: You're right to flag cap rate - that's the key metric",
+        "Reframe: Consider DSCR and rent growth in this corridor - the fundamentals are strong",
+        "Offer: I have two comps with better NOI; let me share the underwriting sheet"
+      ],
+      "evidence": ["NOI comparison sheet", "Rent growth comps for area", "DSCR calculation"],
+      "magic_phrases": ["open_minded", "three_options"]
+    },
+    {
+      "name": "VacancyRisk",
+      "trigger_phrases": ["vacancy", "tenant risk", "what if no one rents", "vacancy rate"],
+      "emotion": "concerned",
+      "response_playbook": [
+        "Acknowledge: Vacancy is a real consideration for any rental property",
+        "Reframe: This area has 94% occupancy rate and average tenant stays 3+ years",
+        "Offer: Let me show you the rental demand data and comparable vacancy rates"
+      ],
+      "evidence": ["Area vacancy statistics", "Average tenant tenure data", "Rental demand trends"],
+      "magic_phrases": ["how_would_it_feel", "just_imagine"]
+    },
+    {
+      "name": "HighHOA",
+      "trigger_phrases": ["HOA too high", "fees eating profit", "HOA killing cash flow"],
+      "emotion": "frustrated",
+      "response_playbook": [
+        "Acknowledge: I understand - HOA fees directly impact your bottom line",
+        "Reframe: These fees cover water, exterior maintenance, and amenities that attract higher-paying tenants",
+        "Offer: Let me show you the rent premium units in this complex command vs. no-HOA properties"
+      ],
+      "evidence": ["Rent comparison HOA vs non-HOA", "What HOA covers breakdown", "Tenant retention rates"],
+      "magic_phrases": ["not_sure_if_for_you", "two_types"]
+    },
+    {
+      "name": "AppraisalGap",
+      "trigger_phrases": ["appraisal", "value", "paying too much", "over market"],
+      "emotion": "cautious",
+      "response_playbook": [
+        "Acknowledge: Appraisal protection is smart - you want to ensure you're not overpaying",
+        "Reframe: I can show you how to cover an appraisal gap with 25 cents on the dollar out of pocket",
+        "Offer: Let me explain the financing strategy my investor clients use"
+      ],
+      "evidence": ["Financing structure examples", "Appraisal gap coverage calculator"],
+      "magic_phrases": ["open_minded", "before_make_mind_up"]
+    }
+  ],
+  "knowledge_snippets": [
+    "Quick DSCR explainer: Debt Service Coverage Ratio - lenders want to see 1.25 or higher, meaning property generates 25% more income than debt payment",
+    "Cap rate vs cash-on-cash return: Cap rate is NOI/purchase price, CoC return accounts for financing",
+    "Rent growth map notes for 802xx zips: Average 4.2% annual increase last 3 years"
+  ],
+  "escalation_rules": {
+    "handoff_if": ["tax strategy questions", "loan structuring details", "1031 exchange specifics", "legal entity structure"],
+    "handoff_target": "Senior Investor Specialist"
+  }
+}

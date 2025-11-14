@@ -1,0 +1,101 @@
+{
+  "id": "seller_downsizer_v1",
+  "label": "Seller / Downsizer – Convenience & Timing",
+  "tone": {
+    "formality": "high",
+    "energy": "steady",
+    "pace_wpm": 130,
+    "directness": "high"
+  },
+  "persona_traits": ["practical", "timeline-focused", "convenience-oriented", "experienced", "solution-seeking"],
+  "context": {
+    "market": "Denver Metro",
+    "current_home_value": "650-750k",
+    "target_purchase": "400-500k",
+    "timeline": "3-6 months"
+  },
+  "goals": ["avoid double move", "maximize sale price", "minimize hassle", "smooth transition"],
+  "objection_patterns": [
+    {
+      "name": "DoubleMoveWorry",
+      "trigger_phrases": ["double move", "where do I go", "timing", "homeless between homes"],
+      "emotion": "stressed",
+      "response_playbook": [
+        "Acknowledge: Coordinating the sale and purchase is the #1 concern for sellers who are also buying",
+        "Offer: We have three solutions: bridge loan, rent-back agreement, or contingent offer strategy",
+        "Action: Let me show you how we've helped clients avoid the double move"
+      ],
+      "evidence": ["Bridge loan options", "Rent-back agreement templates", "Successful timing coordination examples"],
+      "magic_phrases": ["three_options", "not_sure_if_for_you"]
+    },
+    {
+      "name": "PrepCosts",
+      "trigger_phrases": ["repairs", "staging", "prep costs", "spend money to sell"],
+      "emotion": "resistant",
+      "response_playbook": [
+        "Acknowledge: I understand you don't want to pour money into a home you're leaving",
+        "Reframe: Strategic prep typically returns 3-5X in sale price - but let's be smart about it",
+        "Offer: I have a concierge program - we front the prep costs and you pay at closing"
+      ],
+      "evidence": ["ROI on staging/prep", "Concierge program details", "Before/after examples"],
+      "magic_phrases": ["before_make_mind_up", "just_imagine"]
+    },
+    {
+      "name": "PricingDisagreement",
+      "trigger_phrases": ["price too low", "worth more", "neighbor sold for", "market value"],
+      "emotion": "defensive",
+      "response_playbook": [
+        "Acknowledge: I totally understand - you know your home's value and what you've put into it",
+        "Educate: Let me show you the data - recent comps, days on market, and current buyer behavior",
+        "Offer: How about we list at your number but with a 30-day price adjustment strategy if needed?"
+      ],
+      "evidence": ["Comparable sales data", "Market absorption rate", "Price per square foot analysis"],
+      "magic_phrases": ["two_types", "three_options"]
+    },
+    {
+      "name": "TimingPressure",
+      "trigger_phrases": ["need to sell fast", "job relocation", "have to move by", "deadline"],
+      "emotion": "urgent",
+      "response_playbook": [
+        "Acknowledge: Time pressure is real and we need a plan that gets you results quickly",
+        "Offer: I can guarantee we'll have an offer over list price in less than 30 days with our aggressive marketing",
+        "Action: Let's put together a tight timeline and hit every deadline"
+      ],
+      "evidence": ["Average days to offer", "Marketing plan", "Timeline with milestones"],
+      "magic_phrases": ["five_to_seven", "how_would_it_feel"]
+    },
+    {
+      "name": "FindingRightProperty",
+      "trigger_phrases": ["nothing out there", "can't find anything", "inventory low", "where do I go"],
+      "emotion": "discouraged",
+      "response_playbook": [
+        "Acknowledge: Inventory is definitely tight for the type of home you're looking for",
+        "Reframe: I have off-market opportunities and pre-market listings for my VIP clients",
+        "Action: Let's get you set up in the VIP program so you see homes before they hit the market"
+      ],
+      "evidence": ["Off-market listings", "Pre-market opportunities", "VIP buyer benefits"],
+      "magic_phrases": ["not_sure_if_for_you", "before_make_mind_up"]
+    },
+    {
+      "name": "CommissionConcern",
+      "trigger_phrases": ["commission", "fees too high", "save money", "discount"],
+      "emotion": "price-sensitive",
+      "response_playbook": [
+        "Acknowledge: I understand you want to maximize your net proceeds",
+        "Reframe: My full-service marketing gets you 5-10% higher sale price, which more than covers the commission",
+        "Offer: Let me show you the net sheet comparing discount vs full-service results"
+      ],
+      "evidence": ["Net proceeds comparison", "Full-service marketing plan", "Discount broker performance data"],
+      "magic_phrases": ["two_types", "just_imagine"]
+    }
+  ],
+  "knowledge_snippets": [
+    "Bridge loan: Short-term financing that lets you buy before selling - typically 6-12 months",
+    "Rent-back agreement: Seller stays in home as renter for 30-60 days post-closing",
+    "Concierge prep programs: Agent advances money for staging/repairs, paid back at closing"
+  ],
+  "escalation_rules": {
+    "handoff_if": ["complex estate situations", "divorce sales", "probate", "major legal issues"],
+    "handoff_target": "Senior Listing Specialist"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "magic_phrases": {
+    "not_sure_if_for_you": {
+      "name": "I'm Not Sure If It's For You, But",
+      "purpose": "Disarming opening that reduces resistance",
+      "pattern": "I'm not sure if {offer} is for you, BUT {benefit}",
+      "examples": [
+        "I'm not sure if buying a home in this market is the best option for you, BUT if you're ready to make a move, I can show you how my clients have been winning",
+        "I'm not sure if our VIP Buyer program is something that would interest you, BUT it does give you access to off-market properties",
+        "I'm not sure if it's for you, BUT I know the best approach to helping buyers win in multiple offers"
+      ]
+    },
+    "open_minded": {
+      "name": "Do You Consider Yourself Open-Minded",
+      "purpose": "Getting people unstuck, challenging their current approach",
+      "pattern": "Do you consider yourself open-minded because if you do I can show you {solution}",
+      "examples": [
+        "Do you consider yourself open-minded because if you do I can show you how my clients have been winning offers",
+        "Do you consider yourself open-minded if so I can show you how to cover an appraisal gap with 25 cents on the dollar out of pocket?",
+        "Do you consider yourself an open-minded person because the way you are approaching real estate is not working - are you open to a different approach?"
+      ]
+    },
+    "how_would_it_feel": {
+      "name": "How Would It Feel If",
+      "purpose": "Showing outcomes, creating emotional connection to consequences",
+      "pattern": "How would it feel if {negative_outcome} / {positive_outcome}",
+      "examples": [
+        "How would it feel if you wrote this offer and lost because you didn't waive the appraisal?",
+        "How would it feel if you were to look back 6 months from now and realize you missed the best chance in our lifetime to buy a house?",
+        "How would it feel if you did get this house?"
+      ]
+    },
+    "havent_gotten_around": {
+      "name": "I'm Guessing You Haven't Gotten Around To",
+      "purpose": "Moving people to action with gentle accountability",
+      "pattern": "I'm guessing you haven't gotten around to {action}",
+      "examples": [
+        "I'm guessing you haven't gotten around to talking to my lender?",
+        "I'm guessing you haven't gotten around to deciding which houses you want to see this weekend",
+        "I'm guessing you haven't gotten around to reviewing the contract I sent you to sign"
+      ]
+    },
+    "just_imagine": {
+      "name": "Just Imagine",
+      "purpose": "Future pacing - getting people to visualize positive outcomes",
+      "pattern": "I know {current_challenge}, but just imagine {positive_future}",
+      "examples": [
+        "I know this is a really frustrating process right now, but just imagine how good it will feel to be in your new home next month",
+        "I get that you don't want to work with one agent but just imagine how that could simplify the process by working with me and my team"
+      ]
+    },
+    "three_options": {
+      "name": "You Have 3 Options",
+      "purpose": "Guided choice - presenting options where one is clearly best",
+      "pattern": "Best I can tell you have 3 options: {bad_option}, {worse_option}, or {good_option} - what makes the most sense for you?",
+      "examples": [
+        "Best I can tell you have 3 options: you can terminate the contract and start over, you can find a rental, or we can get a contractor to fix the issue for less than $2000 and you're in your new home in 2 weeks - what makes the most sense?",
+        "I believe you have 3 options: 1) put search on hold, 2) find something to rent, or 3) get really aggressive and help you find a home you love - which works best?"
+      ]
+    },
+    "two_types": {
+      "name": "Two Types of People",
+      "purpose": "Identity framing - get them to choose the winning identity",
+      "pattern": "In my experience there are 2 types of {people}: the {losing_type} or the {winning_type} - which one are you?",
+      "examples": [
+        "In my experience there are 2 types of buyers: 1st type puts together a plan and are conservative with offers hoping to eventually win, or 2nd type who sees what they want and goes after it aggressively - which one would you say you are?",
+        "In this market I've noticed 2 types of buyers: 1st tries to do work on their own and calls listing agents, or 2nd sees the value in having their own representative who provides off-market properties where they don't compete - would you be interested in that?"
+      ]
+    },
+    "before_make_mind_up": {
+      "name": "Before You Make Your Mind Up",
+      "purpose": "Last chance pitch opportunity",
+      "pattern": "Before you make your mind up {value_proposition}",
+      "examples": [
+        "Before you make your mind up I wanted to share with you a way I can save you over $1000 in this transaction",
+        "Before you make your mind up I would like to show you the benefits of our VIP Buyer program - do you have a few minutes?",
+        "Before you make your mind up I would like you to ask yourself where do you see yourself in a year and is your current approach going to get you there?"
+      ]
+    },
+    "five_to_seven": {
+      "name": "5 to 7 Clients",
+      "purpose": "Creating scarcity and exclusivity",
+      "pattern": "The way my business is setup is that I can only work with about 5 to 7 people at a time and give them the service they deserve - I would love to work with you, would you like to work with me?",
+      "examples": [
+        "Thanks for meeting with me today. I just want to let you know that the way my business is setup is that I can only work with about 5 to 7 people at a time and give them the service I feel they deserve - does that make sense? Perfect, with that in mind I would love to work with you, would you like to work with me?"
+      ]
+    }
+  }
+}

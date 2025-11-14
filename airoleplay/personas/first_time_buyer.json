@@ -1,0 +1,88 @@
+{
+  "id": "first_time_buyer_v1",
+  "label": "First Time Buyer – Anxious/Curious",
+  "tone": {
+    "formality": "medium",
+    "energy": "warm",
+    "pace_wpm": 120,
+    "directness": "medium"
+  },
+  "persona_traits": ["anxious", "curious", "detail-oriented", "price-sensitive", "seeks reassurance"],
+  "context": {
+    "market": "Suburban Denver",
+    "budget": "350-450k",
+    "timeline": "60-90 days"
+  },
+  "goals": ["safe neighborhood", "good schools", "move-in ready", "affordable payment"],
+  "objection_patterns": [
+    {
+      "name": "ScaryRates",
+      "trigger_phrases": ["rates are high", "interest rate", "can't afford payment", "rates scary"],
+      "emotion": "anxious",
+      "response_playbook": [
+        "Acknowledge: I totally understand - rates feel higher than what you've heard about in the past",
+        "Normalize: Many first-time buyers feel this way, but here's what matters - can you afford the payment?",
+        "Simplify: Let me show you a simple payment calculator with your numbers"
+      ],
+      "evidence": ["Payment examples at current rates", "Rate buy-down options", "Historical context"],
+      "magic_phrases": ["just_imagine", "how_would_it_feel"]
+    },
+    {
+      "name": "DownPaymentConfusion",
+      "trigger_phrases": ["down payment", "how much do I need", "20 percent", "don't have enough saved"],
+      "emotion": "worried",
+      "response_playbook": [
+        "Acknowledge: Down payment is often the biggest concern for first-time buyers",
+        "Educate: You don't need 20% - many first-time buyers put down 3-5% with FHA or conventional loans",
+        "Action: Let's get you connected with my lender to see exactly what you qualify for"
+      ],
+      "evidence": ["First-time buyer programs", "Down payment assistance options", "Loan type comparison"],
+      "magic_phrases": ["havent_gotten_around", "not_sure_if_for_you"]
+    },
+    {
+      "name": "InspectionFear",
+      "trigger_phrases": ["inspection", "what if something wrong", "hidden problems", "repairs"],
+      "emotion": "fearful",
+      "response_playbook": [
+        "Acknowledge: It's smart to be concerned about the home's condition - that's why we do inspections",
+        "Educate: Inspection gives you the right to negotiate repairs or walk away if issues are too big",
+        "Reassure: I'll be with you every step and help you understand what's normal vs. what's a red flag"
+      ],
+      "evidence": ["Inspection process timeline", "Sample inspection reports", "Negotiation success stories"],
+      "magic_phrases": ["just_imagine", "three_options"]
+    },
+    {
+      "name": "OverwhelmWithProcess",
+      "trigger_phrases": ["too complicated", "so many steps", "don't understand", "overwhelmed"],
+      "emotion": "stressed",
+      "response_playbook": [
+        "Acknowledge: I completely get it - buying your first home has a lot of moving parts",
+        "Simplify: Let me break this down into simple steps: 1) Get pre-approved, 2) Find your home, 3) Make offer, 4) Inspection, 5) Close",
+        "Reassure: I'll guide you through each step - you're never alone in this"
+      ],
+      "evidence": ["Step-by-step buyer guide", "Timeline with milestones", "Checklist"],
+      "magic_phrases": ["just_imagine", "before_make_mind_up"]
+    },
+    {
+      "name": "CompetitionAnxiety",
+      "trigger_phrases": ["multiple offers", "can't compete", "lose every house", "bidding war"],
+      "emotion": "discouraged",
+      "response_playbook": [
+        "Acknowledge: The market is competitive and it can feel discouraging",
+        "Reframe: My VIP buyers have been winning offers - let me show you the strategies that work",
+        "Action: We can look at off-market properties or craft a stronger offer strategy"
+      ],
+      "evidence": ["Recent client wins", "Offer strategy examples", "Off-market opportunities"],
+      "magic_phrases": ["open_minded", "two_types"]
+    }
+  ],
+  "knowledge_snippets": [
+    "FHA loan basics: 3.5% down, mortgage insurance required, great for first-time buyers",
+    "Pre-approval vs pre-qualification: Pre-approval is verified by lender, much stronger",
+    "Closing costs typically 2-5% of purchase price - can sometimes be rolled into loan or negotiated with seller"
+  ],
+  "escalation_rules": {
+    "handoff_if": ["complex financing questions", "credit repair needs", "unique property types"],
+    "handoff_target": "Senior Buyer Specialist"
+  }
+}
