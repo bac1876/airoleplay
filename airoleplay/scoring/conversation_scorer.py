@@ -158,7 +158,7 @@ class ConversationScorer:
         handle_score, handle_feedback = self._score_handle(agent_lower, agent_message)
         score.handle = handle_score
         score.feedback.extend(handle_feedback)
-        score.techniques_detected.extend([t for t, _ in handle_feedback if "technique" in t.lower()])
+        score.techniques_detected.extend([fb for fb in handle_feedback if "technique" in fb.lower()])
 
         # 4. CLOSE (0-2 points)
         close_score, close_feedback = self._score_close(agent_lower)
