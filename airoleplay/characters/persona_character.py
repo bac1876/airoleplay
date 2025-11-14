@@ -151,7 +151,8 @@ class PersonaCharacter:
         if self.escalation_rules.get('handoff_if'):
             prompt_parts.append(f"\n\n## Escalation:")
             prompt_parts.append(f"If agent asks about: {', '.join(self.escalation_rules['handoff_if'][:2])}")
-            prompt_parts.append(f'Say: "That\'s a great question - let me connect you with {self.escalation_rules[\"handoff_target\"]}"')
+            handoff_target = self.escalation_rules['handoff_target']
+            prompt_parts.append(f"Say: \"That's a great question - let me connect you with {handoff_target}\"")
 
         # Final instructions
         prompt_parts.append("\n\n## Important:")
