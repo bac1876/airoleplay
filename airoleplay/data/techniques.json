@@ -69,7 +69,7 @@
         "1_acknowledge_affirm": {
           "description": "Show you're listening, align with them, eliminate 'I'm right you're wrong'",
           "terms": ["Perfect", "That makes perfect sense", "Absolutely", "Great", "Fantastic", "You're absolutely right", "That's valid", "That's a valid concern", "You're right", "I can appreciate that", "Amazing", "Most people tell me that", "Wow that's awesome", "I can see the benefit in that", "Terrific", "That's right", "That's true", "I agree", "Wonderful", "I understand your concern"],
-          "avoid": ["I understand" - breaks rapport],
+          "avoid": ["I understand (breaks rapport)"],
           "pattern": "[Acknowledgement term] + [restate their concern]"
         },
         "2_isolate": {
@@ -212,7 +212,7 @@
   },
   "rapport_breakers": {
     "description": "Phrases that BREAK rapport - avoid these",
-    "phrases": ["I understand" (without qualifier), "You're wrong", "Actually...", "But you said...", "That doesn't make sense"],
+    "phrases": ["I understand (without qualifier)", "You're wrong", "Actually...", "But you said...", "That doesn't make sense"],
     "note": "'I understand' alone breaks rapport - use 'I can appreciate that' or 'I understand your concern'"
   }
 }
