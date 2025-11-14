@@ -47,4 +47,8 @@ sessions/
 logs/
 *.log
 call_reports/
-*.txt
+
+# Allow requirements.txt and runtime.txt (needed for deployment)
+# but ignore other txt files in specific directories
+logs/*.txt
+sessions/*.txt
