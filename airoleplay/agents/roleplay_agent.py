@@ -1,18 +1,16 @@
-"""Roleplay agent implementation using deepagents."""
+"""Roleplay agent implementation using LangChain."""
 
 import os
-from typing import Optional
+from typing import Optional, List
 
 from langchain_anthropic import ChatAnthropic
-from deepagents import create_agent
-from deepagents.core import AgentState
-from langgraph.graph import StateGraph
+from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
 
 from ..characters.base import Character
 
 
 class RoleplayAgent:
-    """An agent that roleplays as a specific character using deepagents."""
+    """An agent that roleplays as a specific character using LangChain."""
 
     def __init__(
         self,
@@ -34,6 +32,8 @@ class RoleplayAgent:
             "DEFAULT_MODEL", "claude-sonnet-4-5-20250929"
         )
         self.temperature = temperature
+        self.system_prompt = character.get_system_prompt()
+        self.message_history: List = []
 
         # Initialize the LLM
         self.llm = ChatAnthropic(
@@ -42,72 +42,53 @@ class RoleplayAgent:
             api_key=api_key or os.getenv("ANTHROPIC_API_KEY"),
         )
 
-        # Create the agent with character's system prompt
-        self.agent = create_agent(
-            model=self.llm,
-            system_prompt=character.get_system_prompt(),
-        )
-
     def chat(self, message: str, thread_id: Optional[str] = None) -> str:
         """Send a message to the character and get a response.
 
         Args:
             message: The message to send
-            thread_id: Optional thread ID for conversation continuity
+            thread_id: Optional thread ID for conversation continuity (not used in this implementation)
 
         Returns:
             The character's response
         """
-        config = {"configurable": {}}
-        if thread_id:
-            config["configurable"]["thread_id"] = thread_id
+        # Build messages with system prompt and history
+        messages = [SystemMessage(content=self.system_prompt)]
+        messages.extend(self.message_history)
+        messages.append(HumanMessage(content=message))
 
-        # Invoke the agent
-        result = self.agent.invoke(
-            {"messages": [("user", message)]},
-            config=config
-        )
+        # Invoke the LLM
+        response = self.llm.invoke(messages)
 
-        # Extract the response
-        if result and "messages" in result:
-            # Get the last AI message
-            for msg in reversed(result["messages"]):
-                if hasattr(msg, "type") and msg.type == "ai":
-                    return msg.content
-                elif isinstance(msg, tuple) and msg[0] == "ai":
-                    return msg[1]
+        # Store in history
+        self.message_history.append(HumanMessage(content=message))
+        self.message_history.append(AIMessage(content=response.content))
 
-        return "I'm not sure how to respond to that."
+        return response.content
 
     async def achat(self, message: str, thread_id: Optional[str] = None) -> str:
         """Async version of chat.
 
         Args:
             message: The message to send
-            thread_id: Optional thread ID for conversation continuity
+            thread_id: Optional thread ID for conversation continuity (not used in this implementation)
 
         Returns:
             The character's response
         """
-        config = {"configurable": {}}
-        if thread_id:
-            config["configurable"]["thread_id"] = thread_id
+        # Build messages with system prompt and history
+        messages = [SystemMessage(content=self.system_prompt)]
+        messages.extend(self.message_history)
+        messages.append(HumanMessage(content=message))
 
-        # Invoke the agent asynchronously
-        result = await self.agent.ainvoke(
-            {"messages": [("user", message)]},
-            config=config
-        )
+        # Invoke the LLM asynchronously
+        response = await self.llm.ainvoke(messages)
 
-        # Extract the response
-        if result and "messages" in result:
-            for msg in reversed(result["messages"]):
-                if hasattr(msg, "type") and msg.type == "ai":
-                    return msg.content
-                elif isinstance(msg, tuple) and msg[0] == "ai":
-                    return msg[1]
+        # Store in history
+        self.message_history.append(HumanMessage(content=message))
+        self.message_history.append(AIMessage(content=response.content))
 
-        return "I'm not sure how to respond to that."
+        return response.content
 
     def get_character_info(self) -> str:
         """Get information about the current character."""

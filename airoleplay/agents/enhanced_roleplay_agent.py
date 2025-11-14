@@ -5,7 +5,7 @@ from typing import Optional, List, Tuple
 from pathlib import Path
 
 from langchain_anthropic import ChatAnthropic
-from deepagents import create_agent
+from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
 
 from ..characters.persona_character import PersonaCharacter
 from ..scoring.conversation_scorer import ConversationScorer, TurnScore
@@ -49,12 +49,8 @@ class EnhancedRoleplayAgent:
             api_key=api_key or os.getenv("ANTHROPIC_API_KEY"),
         )
 
-        # Create agent with persona's system prompt
-        system_prompt = persona.get_system_prompt(difficulty)
-        self.agent = create_agent(
-            model=self.llm,
-            system_prompt=system_prompt,
-        )
+        # Message history
+        self.message_history: List = []
 
     def chat(self, agent_message: str, thread_id: Optional[str] = None) -> dict:
         """Send message and get response with scoring.
@@ -74,36 +70,22 @@ class EnhancedRoleplayAgent:
 
             # Adjust persona cooperation based on score
             self.persona.adjust_cooperation(turn_score.total)
-
-            # Update agent's system prompt with new cooperation level
-            system_prompt = self.persona.get_system_prompt(self.difficulty)
-            self.agent = create_agent(
-                model=self.llm,
-                system_prompt=system_prompt,
-            )
         else:
             turn_score = None
 
-        # Get persona response
-        config = {"configurable": {}}
-        if thread_id:
-            config["configurable"]["thread_id"] = thread_id
+        # Get persona response using LangChain
+        system_prompt = self.persona.get_system_prompt(self.difficulty)
+        messages = [SystemMessage(content=system_prompt)]
+        messages.extend(self.message_history)
+        messages.append(HumanMessage(content=agent_message))
 
-        result = self.agent.invoke(
-            {"messages": [("user", agent_message)]},
-            config=config
-        )
+        # Invoke LLM
+        result = self.llm.invoke(messages)
+        client_response = result.content
 
-        # Extract response
-        client_response = ""
-        if result and "messages" in result:
-            for msg in reversed(result["messages"]):
-                if hasattr(msg, "type") and msg.type == "ai":
-                    client_response = msg.content
-                    break
-                elif isinstance(msg, tuple) and msg[0] == "ai":
-                    client_response = msg[1]
-                    break
+        # Store in message history
+        self.message_history.append(HumanMessage(content=agent_message))
+        self.message_history.append(AIMessage(content=client_response))
 
         # Store turn
         self.conversation_turns.append((agent_message, client_response))
@@ -231,10 +213,4 @@ class EnhancedRoleplayAgent:
         self.persona.reset_conversation()
         self.conversation_turns = []
         self.turn_scores = []
-
-        # Reset agent with initial system prompt
-        system_prompt = self.persona.get_system_prompt(self.difficulty)
-        self.agent = create_agent(
-            model=self.llm,
-            system_prompt=system_prompt,
-        )
+        self.message_history = []
