@@ -42,7 +42,9 @@ ENV/
 Thumbs.db
 
 # Project specific
-characters/
+# Note: airoleplay/characters/ is needed for the package - don't ignore it
+# Only ignore generated character files in the root
+/characters/
 sessions/
 logs/
 *.log
