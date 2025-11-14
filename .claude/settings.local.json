@@ -5,7 +5,11 @@
       "Bash(pip:*)",
       "Bash(git init:*)",
       "Bash(git branch:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nInitial commit: AI Roleplay + Call Coaching System\n\nFeatures:\n- Live roleplay training with 3 personas (Investor, First-Time Buyer, Seller)\n- CFR framework integration with 20+ sales techniques\n- Call recording analysis with Whisper transcription\n- Streamlit web interface\n- CLI version included\n- Advanced scoring system\n\nBuilt with deepagents, LangChain, and OpenAI Whisper.\n\n🤖 Generated with Claude Code (https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(gh:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
     ],
     "deny": [],
     "ask": []

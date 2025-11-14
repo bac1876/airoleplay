@@ -2,6 +2,38 @@
 
 A comprehensive real estate sales training platform powered by deepagents and the CFR (Communicating For Real) framework.
 
+**🌐 [Try the Live Demo](#)** | **📖 [Deployment Guide](DEPLOYMENT.md)** | **💻 [GitHub](https://github.com/bac1876/airoleplay)**
+
+## Quick Start
+
+### Web Interface (Streamlit)
+```bash
+# Clone the repository
+git clone https://github.com/bac1876/airoleplay.git
+cd airoleplay
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Set up environment variables
+cp .env.example .env
+# Edit .env with your API keys
+
+# Run web app
+streamlit run app.py
+```
+
+### CLI Version
+```bash
+# Run command-line interface
+python main.py
+```
+
+### Deploy to Railway
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/bac1876/airoleplay)
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed deployment instructions.
+
 ## Features
 
 ### 🎭 Live Roleplay Training
